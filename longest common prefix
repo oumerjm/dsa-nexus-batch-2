@@ -1,0 +1,11 @@
+class Solution:
+    def longestCommonPrefix(self, strs: List[str]) -> str:
+        common_pref = strs[0]
+        if not strs:
+            return ""
+        for word in strs[1:]:
+            while not word.startswith(common_pref):
+                common_pref =  common_pref[:-1]
+                if common_pref == "":
+                    return ""
+        return common_pref
