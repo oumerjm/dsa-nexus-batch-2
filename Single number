@@ -1,0 +1,6 @@
+class Solution:
+    def singleNumber(self, nums: List[int]) -> int:
+        uniques = 0
+        for num in nums:
+            uniques^=num 
+        return uniques
