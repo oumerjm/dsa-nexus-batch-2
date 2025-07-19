@@ -1,0 +1,9 @@
+if __name__ == '__main__':
+    n = int(input())
+    arr = map(int, input().split())
+    biggest = set(list(arr))    
+    m = float("-inf")
+    for i in biggest:
+        if i > m and i!=max(biggest):
+            m= i
+    print(m)
